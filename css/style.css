@@ -295,7 +295,6 @@
 
 .sidebar{
   width: 270px;
-  margin-left: 120px;
   font-family: OpenSans, sans-serif;
 }
 
@@ -489,15 +488,18 @@
 }
 
 .shop-goods{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 23px;
   display: flex;
   justify-content: space-between;
-  margin-right: 66px;
 }
 
 .goods-card{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 
 .goods-info{
@@ -794,6 +796,292 @@
     display: none;
   }
 }
+
+
+@media (max-width: 1199px){
+  .menu-list {
+    display: none;
+  }
+
+  .menu {
+   display: flex;
+  }
+
+  .menu-button {
+    border: none;
+    width: 22px;
+    height: 19px;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .menu-button-label, .menu-button:before, .menu-button:after {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+  }
+
+  .menu-button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+  }
+
+  .menu-button:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1199px){
+  .header-content, .main-wrapper, .footer {
+    padding: 0 35px;
+  }
+
+  .header {
+    background-image: url("../img/banner-bg-tablet.jpg");
+    padding-bottom: 160px;
+  }
+
+  .logo {
+    width: 160px;
+    margin-left: 0;
+  }
+
+  .headline-wrapper {
+    max-width: 650px;
+    margin-top: 85px;
+  }
+
+  .headline {
+    font-size: 40px;
+    line-height: 1.4;
+  }
+
+  .trends {
+    margin-top: 45px;
+  }
+
+  .trend-card-wrapper {
+    flex-basis: 49%;
+    flex-grow: 1;
+    min-height: 247px;
+    padding: 15px 19px;
+    margin-top: 0; 
+    margin-bottom: 4px;
+  }
+
+  .trend-card-wrapper:nth-child(2n+1) {
+    margin-right: 4px;
+  }
+
+  .trends-card {
+    margin-top: 18px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .trend-card {
+    padding: 29px 29px;
+  }
+
+  .section-name {
+    font-size: 18px;
+  }
+  .main-wrapper {
+    margin: 47px auto 0 auto;
+  }
+
+  .post-title {
+    margin-top: 10px;
+    font-size: 17px;
+    line-height: 1.3;
+  }
+
+  .post{
+    flex-direction: column;
+    border-bottom: 3px solid rgb(243, 243, 243);
+  }
+
+
+
+  .post-info{
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .sidebar {
+    margin-left: 35px;
+  }
+
+  .sidebar-section:first-child {
+    margin-top: -5px;
+  }
+
+  .sidebar-title {
+    margin-bottom: 21px;
+  }
+
+  .author {
+    margin-left: 10px;
+  }
+
+  .post-text {
+    margin-top: 26px;
+  }
+
+  .shop-wrapper{
+    padding: 0 35px;
+  }
+
+  .shop-goods{
+    padding: 0;
+    margin-top: 27px;
+    flex-wrap: wrap;
+  }
+
+  .goods-card{
+    margin-top: 30px;
+    padding: 0 23px 23px;
+    width: calc(50% - 10px);
+  }
+
+  .goods-info {
+    width: 100%;
+    min-width: 290px;
+    margin-top: -15px;
+  }
+
+  .footer {
+    margin-top: 20px;
+  }
+
+  .copyright {
+    margin-top: 20px;
+  }
+
+  }
+
+  @media (max-width: 640px){
+
+    .header {
+      background-image: url("../img/banner-mobile.jpg");
+      padding-top: 30px;
+      padding-bottom:210px;
+    }
+
+    .header-content, .main-wrapper, .footer, .shop-wrapper {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .trends-card, .main-wrapper, .post, .shop-goods{
+      flex-direction: column;
+    }
+
+    .post{
+      border-bottom: 3px solid rgb(243, 243, 243);
+    }
+
+    .post-img{
+      min-width: 0;
+    }
+
+    .headline {
+      font-size: 26px;
+      line-height: 1.4;
+    }
+
+    .header-content {
+      flex-direction: column-reverse;
+    }
+
+    .menu {
+      align-self: flex-end;
+    }
+    
+    .logo {
+      width: 270px;
+      margin: 175px 0 28px 0;
+    }
+
+    .headline-wrapper {
+      padding: 0 30px;
+      margin-top: 0;
+  
+    }
+  
+    .headline {
+      font-size: 26px;
+      line-height: 1.4;
+    }
+  
+    .main {
+      width: 100%;
+    }
+
+    .trend-card-wrapper {
+      width: 100%;
+      min-height: 232px;
+      margin-top: 3px;
+    }
+  
+    .trend-card {
+      padding: 26px 20px;
+    }
+  
+    .trend-title {
+      margin-top: 9px;
+      font-size: 16px;
+      line-height: 1.25;
+    }
+
+    .post-info{
+      margin-top: 17px;
+      margin-left: 0;
+    }
+
+    .shop-goods {
+      margin-top: 30px;
+    }
+  
+    .shop-wrapper {
+      margin-top: 30px;
+    }
+  
+    .goods-card {
+      align-items: center;
+      margin-bottom: 55px;
+    }
+  
+    .goods-info {
+      margin-top: -12px;
+      padding-top: 25px;
+    }
+  
+    .goods-title {
+      font-size: 17px;
+    }
+  
+
+    .sidebar{
+      margin-top: 45px;
+      width: 100%;
+    }
+
+    .footer {
+      margin-top: 15px;
+    }
+  
+    .copyright {
+      margin: 45px auto 45px;
+    }
+
+  }
+
 
 
 
